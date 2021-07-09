@@ -1,14 +1,16 @@
 /*
  * @Author: Stevie
  * @Date: 2021-07-09 17:27:20
- * @LastEditTime: 2021-07-09 17:51:42
+ * @LastEditTime: 2021-07-09 17:56:44
  * @LastEditors: Stevie
- * @Description: 
+ * @Description:
  */
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+
 // - process.cwd() 可以获取Node.js进程的当前工作目录
-const rootPath = process.cwd();
+const rootPath = process.cwd()
 
 module.exports = {
   entry: path.resolve(rootPath, 'src/index.js'),
@@ -31,5 +33,6 @@ module.exports = {
       inject: 'body',
       scriptLoading: 'blocking',
     }),
-  ]
+    new CleanWebpackPlugin(),
+  ],
 }
