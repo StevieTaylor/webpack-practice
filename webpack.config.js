@@ -1,7 +1,7 @@
 /*
  * @Author: Stevie
  * @Date: 2021-07-09 15:14:31
- * @LastEditTime: 2021-07-09 17:12:18
+ * @LastEditTime: 2021-07-09 17:24:47
  * @LastEditors: Stevie
  * @Description:
  */
@@ -44,5 +44,6 @@ module.exports = {
         },
       },
     }
-  }
+  },
+  devtool: 'eval-cheap-module-source-map',
 }
