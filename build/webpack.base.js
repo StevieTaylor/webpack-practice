@@ -1,7 +1,7 @@
 /*
  * @Author: Stevie
  * @Date: 2021-07-09 17:27:20
- * @LastEditTime: 2021-07-16 14:20:03
+ * @LastEditTime: 2021-07-16 16:00:29
  * @LastEditors: Stevie
  * @Description:
  */
@@ -27,8 +27,20 @@ module.exports = {
       },
       {
         test: /\.(c|le)ss$/,
-        use: ['style-loader', 'css-loader', 'less-loader'],
         exclude: /node_modules/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'less-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: ['autoprefixer'],
+              },
+            },
+          },
+        ],
       },
     ],
   },
