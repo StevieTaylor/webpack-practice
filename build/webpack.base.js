@@ -1,7 +1,7 @@
 /*
  * @Author: Stevie
  * @Date: 2021-07-09 17:27:20
- * @LastEditTime: 2021-07-09 17:56:44
+ * @LastEditTime: 2021-07-16 14:20:03
  * @LastEditors: Stevie
  * @Description:
  */
@@ -23,6 +23,11 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.(c|le)ss$/,
+        use: ['style-loader', 'css-loader', 'less-loader'],
         exclude: /node_modules/,
       },
     ],
