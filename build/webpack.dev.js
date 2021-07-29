@@ -1,7 +1,7 @@
 /*
  * @Author: Stevie
  * @Date: 2021-07-09 17:27:05
- * @LastEditTime: 2021-07-09 17:44:46
+ * @LastEditTime: 2021-07-29 17:57:50
  * @LastEditors: Stevie
  * @Description:
  */
@@ -14,9 +14,12 @@ const devConfig = {
     port: 7090,
     hot: true,
     compress: true,
-    stats: 'errors-only'
+    stats: 'errors-only',
   },
-  devtool: 'eval-cheap-module-source-map'
+  devtool: 'eval-cheap-module-source-map',
+  cache: {
+    type: 'memory',
+  },
 }
 
 module.exports = merge(baseConfig, devConfig)
