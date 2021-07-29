@@ -1,7 +1,7 @@
 /*
  * @Author: Stevie
  * @Date: 2021-07-09 17:27:20
- * @LastEditTime: 2021-07-29 17:16:58
+ * @LastEditTime: 2021-07-29 17:40:27
  * @LastEditors: Stevie
  * @Description:
  */
@@ -45,6 +45,10 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: /\.(png|jpg|gif|jpeg|webp|svg|eot|ttf|woff|woff2)$/,
+        type: 'asset',
       },
     ],
   },
