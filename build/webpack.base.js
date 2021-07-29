@@ -1,7 +1,7 @@
 /*
  * @Author: Stevie
  * @Date: 2021-07-09 17:27:20
- * @LastEditTime: 2021-07-16 17:35:10
+ * @LastEditTime: 2021-07-29 16:48:34
  * @LastEditors: Stevie
  * @Description:
  */
@@ -30,18 +30,9 @@ module.exports = {
         test: /\.(le|c)ss$/,
         exclude: /node_modules/,
         use: [
-          'style-loader',
           MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              modules: {
-                auto: true,
-                exportGlobals: true,
-                localIdentName: '[local]__[hash:base64:5]',
-              },
-            },
-          },
+          // 'style-loader', 因为 style-loader 和 mini-css-extract-plugin 冲突
+          'css-loader',
           'less-loader',
           {
             loader: 'postcss-loader',

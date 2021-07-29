@@ -1,7 +1,7 @@
 /*
  * @Author: Stevie
  * @Date: 2021-07-09 15:13:57
- * @LastEditTime: 2021-07-16 14:32:00
+ * @LastEditTime: 2021-07-29 16:43:42
  * @LastEditors: Stevie
  * @Description:
  */
@@ -14,9 +14,8 @@ class Main {
 
   renderTitle() {
     const div = document.createElement('div')
-    div.className = 'chocolate'
-    div.style.textAlign = 'center'
-    div.innerHTML = 'Title'
+    div.className = 'title'
+    div.innerHTML = '标题'
     document.body.appendChild(div)
   }
 
