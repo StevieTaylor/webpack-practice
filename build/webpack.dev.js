@@ -1,7 +1,7 @@
 /*
  * @Author: Stevie
  * @Date: 2021-07-09 17:27:05
- * @LastEditTime: 2021-07-29 17:57:50
+ * @LastEditTime: 2021-07-29 18:27:52
  * @LastEditors: Stevie
  * @Description:
  */
@@ -19,6 +19,9 @@ const devConfig = {
   devtool: 'eval-cheap-module-source-map',
   cache: {
     type: 'memory',
+  },
+  optimization: {
+    minimize: true,
   },
 }
 
