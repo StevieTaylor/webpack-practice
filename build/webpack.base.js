@@ -1,7 +1,7 @@
 /*
  * @Author: Stevie
  * @Date: 2021-07-09 17:27:20
- * @LastEditTime: 2021-07-29 16:52:10
+ * @LastEditTime: 2021-07-29 17:16:58
  * @LastEditors: Stevie
  * @Description:
  */
@@ -10,6 +10,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssPlugin = require('optimize-css-assets-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 // - process.cwd() 可以获取Node.js进程的当前工作目录
 const rootPath = process.cwd()
@@ -54,6 +55,15 @@ module.exports = {
       scriptLoading: 'blocking',
     }),
     new CleanWebpackPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: '*.js',
+          context: path.resolve(rootPath, 'public/js'),
+          to: path.resolve(rootPath, 'dist/js'),
+        },
+      ],
+    }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
     }),
